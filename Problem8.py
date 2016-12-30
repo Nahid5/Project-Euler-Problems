@@ -34,8 +34,8 @@ theAnswer = ""
 Finds the answer my starting from the largest possible value than one by one decreasing checks if it's in the
 larger answer.  Than the numbers are multiplied together from string
 """
-for x in range (9999 , -1, -1):
-    if (str(x) in str(numbers)):
+for x in range (9999, -1, -1):
+    if (str(x) in str(numbers) and "0" not in str(x)):      #to check if string x is in numbers & if it has 0 b/c anything *0=0
         theAnswer = str(x)
         print (x)
         break
