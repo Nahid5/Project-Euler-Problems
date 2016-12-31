@@ -112,8 +112,9 @@ with open ("problem13.txt") as myFile:
 sec = np.reshape(lines, (-1,100))        #to make it into a list
 
 map(str, sec)
-lin = 1
+total = 0
 for lines in sec:
     for letter in lines:
-        print("The first ten digits for line " + str(lin)+ " is: "+ letter[0:10])
-        lin += 1
+        total += int(letter)
+
+print (str(total)[0:10])
