@@ -21,6 +21,18 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 """
 import time
 start = time.time()
+"""
+#another way of writing
+def fib(n):     #fast fib equation
+    a = 1
+    b = 0
+    while (n > 1):
+        c = a + b
+        b  = a
+        a = c
+        n = n - 1
+    return a
+"""
 def fib(n):     #fast fib equation
     a = 1
     b = 0
