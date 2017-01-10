@@ -15,14 +15,10 @@ def fib (n):
         return fib(n-1) + fib(n-2)
 fibEven = []
 for x in range(0 , 500):        #500 is just a random number to get to the 4000000
-    if (fib(x) < 4000000):      #4000000 is the largest number that will be included
-        fibEven.append(fib(x))
-    else:
+    if (fib(x) > 4000000):
         break
-fibEven.pop(0)      #to remove the first element: 0
-fibEven.pop(0)      #to remove the second element: 1
-for x in fibEven:
-    if (x % 2 != 0):
-        fibEven.remove(x)
+    if (fib(x) % 2 == 0):      #4000000 is the largest number that will be included
+        fibEven.append(fib(x))
+
 print(fibEven)
 print(sum(fibEven))
