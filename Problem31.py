@@ -13,19 +13,21 @@ start = time.time()
 ways = 0
 #checks one by one if the number's combine to make 200
 #teh numbers increase b/c having large numbers would slow down and 200*2 = 400, so keeping low numbers is safe and faster
-for a in range(0,3):
+for a in range(0,2):
     for b in range(0, 3):
         for c in range(0, 5):
-            for d in range(0, 20):
-                for e in range(0, 30):
-                    for f in range(0, 50):
-                        for g in range(0, 150):
+            for d in range(0, 11):
+                for e in range(0, 21):
+                    for f in range(0, 41):
+                        for g in range(0, 101):
                             for h in range(0, 201):
-                                if (h + 2 * g + 5 * f + 10 * e + 20 * d + 50 * c + 100 * b + 200 * a > 200):break
+                                if (h + 2 * g + 5 * f + 10 * e + 20 * d + 50 * c + 100 * b + 200 * a > 200): break
                                 if (h + 2*g + 5*f + 10*e + 20*d + 50*c + 100*b + 200*a == 200):
                                     ways += 1
+                                    break
+                                #print(ways)
 
 end = time.time() - start
-#answer is 73682 and takes about 162 seconds
+#answer is 73682 and takes about 34 seconds
 print(end)
 print(ways)
